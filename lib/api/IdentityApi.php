@@ -12,7 +12,7 @@
 /**
  * Verification API
  *
- * # Introduction  <span class=\"subtext\"> Welcome to the Passbase Verifications API docs. This documentation will help you understand our models and the Verification API with its endpoints. Based on this you can build your own system (i.e. verification) and hook it up to Passbase.  In case of feedback or questions you can reach us under this email address: [developer@passbase.com](mailto:developer@passbase.com). </span>  A User submits a video selfie and valid identifying __Resources__ during a __Verification__ guided by the Passbase client-side integration. Once all the necessary __Resources__ are submitted, __Data points__ are extracted, digitized, and authenticated. These Data points then becomes part of the User's __Identity__. The User then consents to share __Resources__ and/or __Data points__ from their Identity with you. This information is passed to you and can be used to make decisions about a User (e.g. activate account). This table below explains our terminology further.  | Term                                    | Description | |-----------------------------------------|-------------| | Data points                             | Any data about a User extracted from a Resource (E.g. Passport Number, or Age). | | [Resource](#tag/resource_model)         | A source document used to generate the Data points for a User (E.g. Passport). | | [Identity](#tag/identity_model)         | A set of Data points and Resources related to and owned by one single User. This data can be accessed by you through a Verification. | | [User](#tag/user_model)                 | The owner of an email address associated with an Identity. | | Verification (signup)                   | A transaction through which a User consents to share Data points with you. If the Data points you request are not already available in the User's Identity, the Passbase client will ask the User to submit the necessary Resource required to extract them. | | Re-authentication (login)               | A transaction through which a User can certify the ownership of Personal data previously shared through an Authentication. |   # Authentication  <span class=\"subtext\"> There are two forms of authentication for the API: <br/>&bull; API Key <br/>&bull; Bearer JWT Token  </span>
+ * # Introduction  <span class=\"subtext\"> Welcome to the Passbase Verifications API docs. This documentation will help you understand our models and the Verification API with its endpoints. Based on this you can build your own system (i.e. verification) and hook it up to Passbase.  In case of feedback or questions you can reach us under this email address: [developer@passbase.com](mailto:developer@passbase.com). </span>  A User submits a video selfie and valid identifying __Resources__ during a __Verification__ guided by the Passbase client-side integration. Once all the necessary __Resources__ are submitted, __Data points__ are extracted, digitized, and authenticated. These Data points then becomes part of the User's __Identity__. The User then consents to share __Resources__ and/or __Data points__ from their Identity with you. This information is passed to you and can be used to make decisions about a User (e.g. activate account). This table below explains our terminology further.  | Term                                    | Description | |-----------------------------------------|-------------| | [Identity](#tag/identity_model)         | A set of Data points and Resources related to and owned by one single User. This data can be accessed by you through a Verification. | | Data points                             | Any data about a User extracted from a Resource (E.g. Passport Number, or Age). | | [Resource](#tag/resource_model)         | A source document used to generate the Data points for a User (E.g. Passport). | | [User](#tag/user_model)                 | The owner of an email address associated with an Identity. | | Verification                            | A transaction through which a User consents to share Data points with you. If the Data points you request are not already available in the User's Identity, the Passbase client will ask the User to submit the necessary Resource required to extract them. | | Re-authentication (login)               | A transaction through which a User can certify the ownership of Personal data previously shared through an Authentication. |   # Authentication  <span class=\"subtext\"> There are two forms of authentication for the API: <br/>&bull; API Key <br/>&bull; Bearer JWT Token  </span>
  *
  * OpenAPI spec version: 1.0.0
  * 
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace Passbase\Api;
+namespace Passbase\api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -96,7 +96,7 @@ class IdentityApi
      *
      * @throws \Passbase\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Passbase\Models\Resource
+     * @return \Passbase\models\Resource
      */
     public function getIdentityResourceById($id, $resource_id)
     {
@@ -114,11 +114,11 @@ class IdentityApi
      *
      * @throws \Passbase\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Passbase\Models\Resource, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Passbase\models\Resource, HTTP status code, HTTP response headers (array of strings)
      */
     public function getIdentityResourceByIdWithHttpInfo($id, $resource_id)
     {
-        $returnType = '\Passbase\Models\Resource';
+        $returnType = '\Passbase\models\Resource';
         $request = $this->getIdentityResourceByIdRequest($id, $resource_id);
 
         try {
@@ -170,7 +170,7 @@ class IdentityApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Passbase\Models\Resource',
+                        '\Passbase\models\Resource',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -214,7 +214,7 @@ class IdentityApi
      */
     public function getIdentityResourceByIdAsyncWithHttpInfo($id, $resource_id)
     {
-        $returnType = '\Passbase\Models\Resource';
+        $returnType = '\Passbase\models\Resource';
         $request = $this->getIdentityResourceByIdRequest($id, $resource_id);
 
         return $this->client
@@ -381,7 +381,7 @@ class IdentityApi
      *
      * @throws \Passbase\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Passbase\Models\Identity[]
+     * @return \Passbase\models\Identity[]
      */
     public function getIdentyById($id)
     {
@@ -398,11 +398,11 @@ class IdentityApi
      *
      * @throws \Passbase\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Passbase\Models\Identity[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Passbase\models\Identity[], HTTP status code, HTTP response headers (array of strings)
      */
     public function getIdentyByIdWithHttpInfo($id)
     {
-        $returnType = '\Passbase\Models\Identity[]';
+        $returnType = '\Passbase\models\Identity[]';
         $request = $this->getIdentyByIdRequest($id);
 
         try {
@@ -454,7 +454,7 @@ class IdentityApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Passbase\Models\Identity[]',
+                        '\Passbase\models\Identity[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -496,7 +496,7 @@ class IdentityApi
      */
     public function getIdentyByIdAsyncWithHttpInfo($id)
     {
-        $returnType = '\Passbase\Models\Identity[]';
+        $returnType = '\Passbase\models\Identity[]';
         $request = $this->getIdentyByIdRequest($id);
 
         return $this->client
@@ -649,7 +649,7 @@ class IdentityApi
      *
      * @throws \Passbase\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Passbase\Models\PaginatedIdentities
+     * @return \Passbase\models\PaginatedIdentities
      */
     public function listIdentities($limit = null, $cursor = null)
     {
@@ -667,11 +667,11 @@ class IdentityApi
      *
      * @throws \Passbase\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Passbase\Models\PaginatedIdentities, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Passbase\models\PaginatedIdentities, HTTP status code, HTTP response headers (array of strings)
      */
     public function listIdentitiesWithHttpInfo($limit = null, $cursor = null)
     {
-        $returnType = '\Passbase\Models\PaginatedIdentities';
+        $returnType = '\Passbase\models\PaginatedIdentities';
         $request = $this->listIdentitiesRequest($limit, $cursor);
 
         try {
@@ -723,7 +723,7 @@ class IdentityApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Passbase\Models\PaginatedIdentities',
+                        '\Passbase\models\PaginatedIdentities',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -767,7 +767,7 @@ class IdentityApi
      */
     public function listIdentitiesAsyncWithHttpInfo($limit = null, $cursor = null)
     {
-        $returnType = '\Passbase\Models\PaginatedIdentities';
+        $returnType = '\Passbase\models\PaginatedIdentities';
         $request = $this->listIdentitiesRequest($limit, $cursor);
 
         return $this->client
@@ -916,7 +916,7 @@ class IdentityApi
      *
      * @throws \Passbase\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Passbase\Models\PaginatedResources
+     * @return \Passbase\models\PaginatedResources
      */
     public function listIdentityResources($id, $limit = null, $cursor = null)
     {
@@ -935,11 +935,11 @@ class IdentityApi
      *
      * @throws \Passbase\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Passbase\Models\PaginatedResources, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Passbase\models\PaginatedResources, HTTP status code, HTTP response headers (array of strings)
      */
     public function listIdentityResourcesWithHttpInfo($id, $limit = null, $cursor = null)
     {
-        $returnType = '\Passbase\Models\PaginatedResources';
+        $returnType = '\Passbase\models\PaginatedResources';
         $request = $this->listIdentityResourcesRequest($id, $limit, $cursor);
 
         try {
@@ -991,7 +991,7 @@ class IdentityApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Passbase\Models\PaginatedResources',
+                        '\Passbase\models\PaginatedResources',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1037,7 +1037,7 @@ class IdentityApi
      */
     public function listIdentityResourcesAsyncWithHttpInfo($id, $limit = null, $cursor = null)
     {
-        $returnType = '\Passbase\Models\PaginatedResources';
+        $returnType = '\Passbase\models\PaginatedResources';
         $request = $this->listIdentityResourcesRequest($id, $limit, $cursor);
 
         return $this->client

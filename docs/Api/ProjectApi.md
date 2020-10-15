@@ -7,7 +7,7 @@ Method | HTTP request | Description
 [**getSettings**](ProjectApi.md#getsettings) | **GET** /settings | Get project settings
 
 # **getSettings**
-> \Passbase\Models\ProjectSettings getSettings()
+> \Passbase\models\ProjectSettings getSettings()
 
 Get project settings
 
@@ -22,7 +22,7 @@ $config = Passbase\Configuration::getDefaultConfiguration()->setApiKey('X-API-KE
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 // $config = Passbase\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-KEY', 'Bearer');
 
-$apiInstance = new Passbase\Api\ProjectApi(
+$apiInstance = new Passbase\api\ProjectApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -43,7 +43,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\Passbase\Models\ProjectSettings**](../Model/ProjectSettings.md)
+[**\Passbase\models\ProjectSettings**](../Model/ProjectSettings.md)
 
 ### Authorization
 

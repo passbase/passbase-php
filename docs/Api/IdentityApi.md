@@ -10,7 +10,7 @@ Method | HTTP request | Description
 [**listIdentityResources**](IdentityApi.md#listidentityresources) | **GET** /identities/{id}/resources | List resources
 
 # **getIdentityResourceById**
-> \Passbase\Models\Resource getIdentityResourceById($id, $resource_id)
+> \Passbase\models\Resource getIdentityResourceById($id, $resource_id)
 
 Get resource
 
@@ -25,7 +25,7 @@ $config = Passbase\Configuration::getDefaultConfiguration()->setApiKey('X-API-KE
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 // $config = Passbase\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-KEY', 'Bearer');
 
-$apiInstance = new Passbase\Api\IdentityApi(
+$apiInstance = new Passbase\api\IdentityApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -52,7 +52,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Passbase\Models\Resource**](../Model/Resource.md)
+[**\Passbase\models\Resource**](../Model/Resource.md)
 
 ### Authorization
 
@@ -66,7 +66,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getIdentyById**
-> \Passbase\Models\Identity[] getIdentyById($id)
+> \Passbase\models\Identity[] getIdentyById($id)
 
 Get identity
 
@@ -81,7 +81,7 @@ $config = Passbase\Configuration::getDefaultConfiguration()->setApiKey('X-API-KE
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 // $config = Passbase\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-KEY', 'Bearer');
 
-$apiInstance = new Passbase\Api\IdentityApi(
+$apiInstance = new Passbase\api\IdentityApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -106,7 +106,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Passbase\Models\Identity[]**](../Model/Identity.md)
+[**\Passbase\models\Identity[]**](../Model/Identity.md)
 
 ### Authorization
 
@@ -120,7 +120,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **listIdentities**
-> \Passbase\Models\PaginatedIdentities listIdentities($limit, $cursor)
+> \Passbase\models\PaginatedIdentities listIdentities($limit, $cursor)
 
 List identities
 
@@ -135,7 +135,7 @@ $config = Passbase\Configuration::getDefaultConfiguration()->setApiKey('X-API-KE
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 // $config = Passbase\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-KEY', 'Bearer');
 
-$apiInstance = new Passbase\Api\IdentityApi(
+$apiInstance = new Passbase\api\IdentityApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -162,7 +162,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Passbase\Models\PaginatedIdentities**](../Model/PaginatedIdentities.md)
+[**\Passbase\models\PaginatedIdentities**](../Model/PaginatedIdentities.md)
 
 ### Authorization
 
@@ -176,7 +176,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **listIdentityResources**
-> \Passbase\Models\PaginatedResources listIdentityResources($id, $limit, $cursor)
+> \Passbase\models\PaginatedResources listIdentityResources($id, $limit, $cursor)
 
 List resources
 
@@ -191,7 +191,7 @@ $config = Passbase\Configuration::getDefaultConfiguration()->setApiKey('X-API-KE
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 // $config = Passbase\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-KEY', 'Bearer');
 
-$apiInstance = new Passbase\Api\IdentityApi(
+$apiInstance = new Passbase\api\IdentityApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -220,7 +220,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Passbase\Models\PaginatedResources**](../Model/PaginatedResources.md)
+[**\Passbase\models\PaginatedResources**](../Model/PaginatedResources.md)
 
 ### Authorization
 

@@ -63,7 +63,7 @@ $config = Passbase\Configuration::getDefaultConfiguration()->setApiKey('X-API-KE
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 // $config = Passbase\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-KEY', 'Bearer');
 
-$apiInstance = new Passbase\Api\IdentityApi(
+$apiInstance = new Passbase\api\IdentityApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -84,7 +84,7 @@ $config = Passbase\Configuration::getDefaultConfiguration()->setApiKey('X-API-KE
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 // $config = Passbase\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-KEY', 'Bearer');
 
-$apiInstance = new Passbase\Api\IdentityApi(
+$apiInstance = new Passbase\api\IdentityApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -104,7 +104,7 @@ $config = Passbase\Configuration::getDefaultConfiguration()->setApiKey('X-API-KE
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 // $config = Passbase\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-KEY', 'Bearer');
 
-$apiInstance = new Passbase\Api\IdentityApi(
+$apiInstance = new Passbase\api\IdentityApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -125,7 +125,7 @@ $config = Passbase\Configuration::getDefaultConfiguration()->setApiKey('X-API-KE
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 // $config = Passbase\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-KEY', 'Bearer');
 
-$apiInstance = new Passbase\Api\IdentityApi(
+$apiInstance = new Passbase\api\IdentityApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
