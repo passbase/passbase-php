@@ -163,26 +163,7 @@ class ProjectSettingsCustomizations implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    const FONT_FAMILY_ARIAL = 'Arial';
-const FONT_FAMILY_EXO = 'Exo';
-const FONT_FAMILY_OPEN_SANS = 'Open Sans';
-const FONT_FAMILY_LATO = 'Lato';
-const FONT_FAMILY_BASKERVILLE = 'Baskerville';
-
-    /**
-     * Gets allowable values of the enum
-     *
-     * @return string[]
-     */
-    public function getFontFamilyAllowableValues()
-    {
-        return [
-            self::FONT_FAMILY_ARIAL,
-self::FONT_FAMILY_EXO,
-self::FONT_FAMILY_OPEN_SANS,
-self::FONT_FAMILY_LATO,
-self::FONT_FAMILY_BASKERVILLE,        ];
-    }
+    
 
     /**
      * Associative array for storing property values
@@ -212,14 +193,6 @@ self::FONT_FAMILY_BASKERVILLE,        ];
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-
-        $allowedValues = $this->getFontFamilyAllowableValues();
-        if (!is_null($this->container['font_family']) && !in_array($this->container['font_family'], $allowedValues, true)) {
-            $invalidProperties[] = sprintf(
-                "invalid value for 'font_family', must be one of '%s'",
-                implode("', '", $allowedValues)
-            );
-        }
 
         return $invalidProperties;
     }
@@ -303,15 +276,6 @@ self::FONT_FAMILY_BASKERVILLE,        ];
      */
     public function setFontFamily($font_family)
     {
-        $allowedValues = $this->getFontFamilyAllowableValues();
-        if (!is_null($font_family) && !in_array($font_family, $allowedValues, true)) {
-            throw new \InvalidArgumentException(
-                sprintf(
-                    "Invalid value for 'font_family', must be one of '%s'",
-                    implode("', '", $allowedValues)
-                )
-            );
-        }
         $this->container['font_family'] = $font_family;
 
         return $this;
