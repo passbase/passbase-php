@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**type** | [**\Passbase\models\ResourceType**](ResourceType.md) |  | [optional] 
+**type** | [**string**](ResourceType.md) |  | [optional] 
 **country** | **string** | 2-letter code of the country | [optional] 
 **resource_files** | [**\Passbase\models\ResourceFilesInput[]**](ResourceFilesInput.md) |  | [optional] 
 **resource_data** | **object** |  | [optional] 

@@ -57,7 +57,7 @@ class IdentityResource implements ModelInterface, ArrayAccess
       */
     protected static $swaggerTypes = [
         'datapoints' => '\Passbase\models\DataPoints',
-'type' => '\Passbase\models\ResourceType'    ];
+'type' => 'string'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -229,7 +229,7 @@ class IdentityResource implements ModelInterface, ArrayAccess
     /**
      * Gets type
      *
-     * @return \Passbase\models\ResourceType
+     * @return string
      */
     public function getType()
     {
@@ -239,7 +239,7 @@ class IdentityResource implements ModelInterface, ArrayAccess
     /**
      * Sets type
      *
-     * @param \Passbase\models\ResourceType $type type
+     * @param string $type type
      *
      * @return $this
      */

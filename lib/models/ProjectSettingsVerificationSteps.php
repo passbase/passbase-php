@@ -57,7 +57,7 @@ class ProjectSettingsVerificationSteps implements ModelInterface, ArrayAccess
       */
     protected static $swaggerTypes = [
         'step' => 'string',
-'resource_types' => '\Passbase\models\ResourceType[]'    ];
+'resource_types' => 'string[]'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -229,7 +229,7 @@ class ProjectSettingsVerificationSteps implements ModelInterface, ArrayAccess
     /**
      * Gets resource_types
      *
-     * @return \Passbase\models\ResourceType[]
+     * @return string[]
      */
     public function getResourceTypes()
     {
@@ -239,7 +239,7 @@ class ProjectSettingsVerificationSteps implements ModelInterface, ArrayAccess
     /**
      * Sets resource_types
      *
-     * @param \Passbase\models\ResourceType[] $resource_types resource_types
+     * @param string[] $resource_types resource_types
      *
      * @return $this
      */

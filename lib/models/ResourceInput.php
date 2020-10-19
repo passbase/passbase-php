@@ -56,7 +56,7 @@ class ResourceInput implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'type' => '\Passbase\models\ResourceType',
+        'type' => 'string',
 'country' => 'string',
 'resource_files' => '\Passbase\models\ResourceFilesInput[]',
 'resource_data' => 'object',
@@ -223,7 +223,7 @@ class ResourceInput implements ModelInterface, ArrayAccess
     /**
      * Gets type
      *
-     * @return \Passbase\models\ResourceType
+     * @return string
      */
     public function getType()
     {
@@ -233,7 +233,7 @@ class ResourceInput implements ModelInterface, ArrayAccess
     /**
      * Sets type
      *
-     * @param \Passbase\models\ResourceType $type type
+     * @param string $type type
      *
      * @return $this
      */

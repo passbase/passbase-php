@@ -60,7 +60,7 @@ class Resource implements ModelInterface, ArrayAccess
 'status' => 'string',
 'created' => 'int',
 'updated' => 'int',
-'type' => '\Passbase\models\ResourceType',
+'type' => 'string',
 'resource_files' => '\Passbase\models\ResourceFiles'    ];
 
     /**
@@ -357,7 +357,7 @@ self::STATUS_PROCESSED,        ];
     /**
      * Gets type
      *
-     * @return \Passbase\models\ResourceType
+     * @return string
      */
     public function getType()
     {
@@ -367,7 +367,7 @@ self::STATUS_PROCESSED,        ];
     /**
      * Sets type
      *
-     * @param \Passbase\models\ResourceType $type type
+     * @param string $type type
      *
      * @return $this
      */
