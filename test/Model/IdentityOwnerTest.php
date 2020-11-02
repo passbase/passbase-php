@@ -1,6 +1,6 @@
 <?php
 /**
- * IdentityTest
+ * IdentityOwnerTest
  *
  * PHP version 5
  *
@@ -29,15 +29,15 @@
 namespace Passbase;
 
 /**
- * IdentityTest Class Doc Comment
+ * IdentityOwnerTest Class Doc Comment
  *
  * @category    Class
- * @description Identity
+ * @description IdentityOwner
  * @package     Passbase
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class IdentityTest extends \PHPUnit_Framework_TestCase
+class IdentityOwnerTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -69,65 +69,30 @@ class IdentityTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "Identity"
+     * Test "IdentityOwner"
      */
-    public function testIdentity()
+    public function testIdentityOwner()
     {
     }
 
     /**
-     * Test attribute "id"
+     * Test attribute "email"
      */
-    public function testPropertyId()
+    public function testPropertyEmail()
     {
     }
 
     /**
-     * Test attribute "status"
+     * Test attribute "first_name"
      */
-    public function testPropertyStatus()
+    public function testPropertyFirstName()
     {
     }
 
     /**
-     * Test attribute "owner"
+     * Test attribute "last_name"
      */
-    public function testPropertyOwner()
-    {
-    }
-
-    /**
-     * Test attribute "score"
-     */
-    public function testPropertyScore()
-    {
-    }
-
-    /**
-     * Test attribute "created"
-     */
-    public function testPropertyCreated()
-    {
-    }
-
-    /**
-     * Test attribute "updated"
-     */
-    public function testPropertyUpdated()
-    {
-    }
-
-    /**
-     * Test attribute "resources"
-     */
-    public function testPropertyResources()
-    {
-    }
-
-    /**
-     * Test attribute "watchlist"
-     */
-    public function testPropertyWatchlist()
+    public function testPropertyLastName()
     {
     }
 }

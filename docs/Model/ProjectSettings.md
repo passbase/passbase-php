@@ -4,7 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **string** | Unique ID of the project | [optional] 
-**slug** | **string** | slugs are meant to be a way to verify people just with the link | [optional] 
+**slug** | **string** | Slugs are meant to be a way to verify people just with the link | [optional] 
 **environment** | **string** |  | [optional] 
 **organization** | **string** | Name of the organization that owns this project | [optional] 
 **customizations** | [**\Passbase\models\ProjectSettingsCustomizations**](ProjectSettingsCustomizations.md) |  | [optional] 

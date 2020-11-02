@@ -58,6 +58,8 @@ class Identity implements ModelInterface, ArrayAccess
     protected static $swaggerTypes = [
         'id' => 'string',
 'status' => 'string',
+'owner' => '\Passbase\models\IdentityOwner',
+'score' => 'double',
 'created' => 'int',
 'updated' => 'int',
 'resources' => '\Passbase\models\IdentityResource[]',
@@ -71,6 +73,8 @@ class Identity implements ModelInterface, ArrayAccess
     protected static $swaggerFormats = [
         'id' => null,
 'status' => null,
+'owner' => null,
+'score' => 'double',
 'created' => 'int64',
 'updated' => 'int64',
 'resources' => null,
@@ -105,6 +109,8 @@ class Identity implements ModelInterface, ArrayAccess
     protected static $attributeMap = [
         'id' => 'id',
 'status' => 'status',
+'owner' => 'owner',
+'score' => 'score',
 'created' => 'created',
 'updated' => 'updated',
 'resources' => 'resources',
@@ -118,6 +124,8 @@ class Identity implements ModelInterface, ArrayAccess
     protected static $setters = [
         'id' => 'setId',
 'status' => 'setStatus',
+'owner' => 'setOwner',
+'score' => 'setScore',
 'created' => 'setCreated',
 'updated' => 'setUpdated',
 'resources' => 'setResources',
@@ -131,6 +139,8 @@ class Identity implements ModelInterface, ArrayAccess
     protected static $getters = [
         'id' => 'getId',
 'status' => 'getStatus',
+'owner' => 'getOwner',
+'score' => 'getScore',
 'created' => 'getCreated',
 'updated' => 'getUpdated',
 'resources' => 'getResources',
@@ -215,6 +225,8 @@ self::STATUS_DECLINED,        ];
     {
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
+        $this->container['owner'] = isset($data['owner']) ? $data['owner'] : null;
+        $this->container['score'] = isset($data['score']) ? $data['score'] : null;
         $this->container['created'] = isset($data['created']) ? $data['created'] : null;
         $this->container['updated'] = isset($data['updated']) ? $data['updated'] : null;
         $this->container['resources'] = isset($data['resources']) ? $data['resources'] : null;
@@ -306,6 +318,54 @@ self::STATUS_DECLINED,        ];
             );
         }
         $this->container['status'] = $status;
+
+        return $this;
+    }
+
+    /**
+     * Gets owner
+     *
+     * @return \Passbase\models\IdentityOwner
+     */
+    public function getOwner()
+    {
+        return $this->container['owner'];
+    }
+
+    /**
+     * Sets owner
+     *
+     * @param \Passbase\models\IdentityOwner $owner owner
+     *
+     * @return $this
+     */
+    public function setOwner($owner)
+    {
+        $this->container['owner'] = $owner;
+
+        return $this;
+    }
+
+    /**
+     * Gets score
+     *
+     * @return double
+     */
+    public function getScore()
+    {
+        return $this->container['score'];
+    }
+
+    /**
+     * Sets score
+     *
+     * @param double $score Float between 0 and 1 representing our confidence that this identity is valid. 0 meaning we couldn't verify any of the information provided with accuracy, and 1 absolute confidence.
+     *
+     * @return $this
+     */
+    public function setScore($score)
+    {
+        $this->container['score'] = $score;
 
         return $this;
     }

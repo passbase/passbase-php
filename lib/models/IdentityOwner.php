@@ -1,6 +1,6 @@
 <?php
 /**
- * ProjectSettings
+ * IdentityOwner
  *
  * PHP version 5
  *
@@ -32,14 +32,14 @@ use \ArrayAccess;
 use \Passbase\ObjectSerializer;
 
 /**
- * ProjectSettings Class Doc Comment
+ * IdentityOwner Class Doc Comment
  *
  * @category Class
  * @package  Passbase
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class ProjectSettings implements ModelInterface, ArrayAccess
+class IdentityOwner implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -48,7 +48,7 @@ class ProjectSettings implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'ProjectSettings';
+    protected static $swaggerModelName = 'IdentityOwner';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -56,12 +56,9 @@ class ProjectSettings implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'id' => 'string',
-'slug' => 'string',
-'environment' => 'string',
-'organization' => 'string',
-'customizations' => '\Passbase\models\ProjectSettingsCustomizations',
-'verification_steps' => '\Passbase\models\ProjectSettingsVerificationSteps[]'    ];
+        'email' => 'string',
+'first_name' => 'string',
+'last_name' => 'string'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -69,12 +66,9 @@ class ProjectSettings implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'id' => null,
-'slug' => null,
-'environment' => null,
-'organization' => null,
-'customizations' => null,
-'verification_steps' => null    ];
+        'email' => null,
+'first_name' => null,
+'last_name' => null    ];
 
     /**
      * Array of property to type mappings. Used for (de)serialization
@@ -103,12 +97,9 @@ class ProjectSettings implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'id' => 'id',
-'slug' => 'slug',
-'environment' => 'environment',
-'organization' => 'organization',
-'customizations' => 'customizations',
-'verification_steps' => 'verification_steps'    ];
+        'email' => 'email',
+'first_name' => 'first_name',
+'last_name' => 'last_name'    ];
 
     /**
      * Array of attributes to setter functions (for deserialization of responses)
@@ -116,12 +107,9 @@ class ProjectSettings implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'id' => 'setId',
-'slug' => 'setSlug',
-'environment' => 'setEnvironment',
-'organization' => 'setOrganization',
-'customizations' => 'setCustomizations',
-'verification_steps' => 'setVerificationSteps'    ];
+        'email' => 'setEmail',
+'first_name' => 'setFirstName',
+'last_name' => 'setLastName'    ];
 
     /**
      * Array of attributes to getter functions (for serialization of requests)
@@ -129,12 +117,9 @@ class ProjectSettings implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'id' => 'getId',
-'slug' => 'getSlug',
-'environment' => 'getEnvironment',
-'organization' => 'getOrganization',
-'customizations' => 'getCustomizations',
-'verification_steps' => 'getVerificationSteps'    ];
+        'email' => 'getEmail',
+'first_name' => 'getFirstName',
+'last_name' => 'getLastName'    ];
 
     /**
      * Array of attributes where the key is the local name,
@@ -177,20 +162,7 @@ class ProjectSettings implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    const ENVIRONMENT_SANDBOX = 'sandbox';
-const ENVIRONMENT_PRODUCTION = 'production';
-
-    /**
-     * Gets allowable values of the enum
-     *
-     * @return string[]
-     */
-    public function getEnvironmentAllowableValues()
-    {
-        return [
-            self::ENVIRONMENT_SANDBOX,
-self::ENVIRONMENT_PRODUCTION,        ];
-    }
+    
 
     /**
      * Associative array for storing property values
@@ -207,12 +179,9 @@ self::ENVIRONMENT_PRODUCTION,        ];
      */
     public function __construct(array $data = null)
     {
-        $this->container['id'] = isset($data['id']) ? $data['id'] : null;
-        $this->container['slug'] = isset($data['slug']) ? $data['slug'] : null;
-        $this->container['environment'] = isset($data['environment']) ? $data['environment'] : null;
-        $this->container['organization'] = isset($data['organization']) ? $data['organization'] : null;
-        $this->container['customizations'] = isset($data['customizations']) ? $data['customizations'] : null;
-        $this->container['verification_steps'] = isset($data['verification_steps']) ? $data['verification_steps'] : null;
+        $this->container['email'] = isset($data['email']) ? $data['email'] : null;
+        $this->container['first_name'] = isset($data['first_name']) ? $data['first_name'] : null;
+        $this->container['last_name'] = isset($data['last_name']) ? $data['last_name'] : null;
     }
 
     /**
@@ -223,14 +192,6 @@ self::ENVIRONMENT_PRODUCTION,        ];
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-
-        $allowedValues = $this->getEnvironmentAllowableValues();
-        if (!is_null($this->container['environment']) && !in_array($this->container['environment'], $allowedValues, true)) {
-            $invalidProperties[] = sprintf(
-                "invalid value for 'environment', must be one of '%s'",
-                implode("', '", $allowedValues)
-            );
-        }
 
         return $invalidProperties;
     }
@@ -248,154 +209,73 @@ self::ENVIRONMENT_PRODUCTION,        ];
 
 
     /**
-     * Gets id
+     * Gets email
      *
      * @return string
      */
-    public function getId()
+    public function getEmail()
     {
-        return $this->container['id'];
+        return $this->container['email'];
     }
 
     /**
-     * Sets id
+     * Sets email
      *
-     * @param string $id Unique ID of the project
+     * @param string $email Email of the user the identity belongs to
      *
      * @return $this
      */
-    public function setId($id)
+    public function setEmail($email)
     {
-        $this->container['id'] = $id;
+        $this->container['email'] = $email;
 
         return $this;
     }
 
     /**
-     * Gets slug
+     * Gets first_name
      *
      * @return string
      */
-    public function getSlug()
+    public function getFirstName()
     {
-        return $this->container['slug'];
+        return $this->container['first_name'];
     }
 
     /**
-     * Sets slug
+     * Sets first_name
      *
-     * @param string $slug Slugs are meant to be a way to verify people just with the link
+     * @param string $first_name First name of the user the identity belongs to
      *
      * @return $this
      */
-    public function setSlug($slug)
+    public function setFirstName($first_name)
     {
-        $this->container['slug'] = $slug;
+        $this->container['first_name'] = $first_name;
 
         return $this;
     }
 
     /**
-     * Gets environment
+     * Gets last_name
      *
      * @return string
      */
-    public function getEnvironment()
+    public function getLastName()
     {
-        return $this->container['environment'];
+        return $this->container['last_name'];
     }
 
     /**
-     * Sets environment
+     * Sets last_name
      *
-     * @param string $environment environment
+     * @param string $last_name Last name of the user the identity belongs to
      *
      * @return $this
      */
-    public function setEnvironment($environment)
+    public function setLastName($last_name)
     {
-        $allowedValues = $this->getEnvironmentAllowableValues();
-        if (!is_null($environment) && !in_array($environment, $allowedValues, true)) {
-            throw new \InvalidArgumentException(
-                sprintf(
-                    "Invalid value for 'environment', must be one of '%s'",
-                    implode("', '", $allowedValues)
-                )
-            );
-        }
-        $this->container['environment'] = $environment;
-
-        return $this;
-    }
-
-    /**
-     * Gets organization
-     *
-     * @return string
-     */
-    public function getOrganization()
-    {
-        return $this->container['organization'];
-    }
-
-    /**
-     * Sets organization
-     *
-     * @param string $organization Name of the organization that owns this project
-     *
-     * @return $this
-     */
-    public function setOrganization($organization)
-    {
-        $this->container['organization'] = $organization;
-
-        return $this;
-    }
-
-    /**
-     * Gets customizations
-     *
-     * @return \Passbase\models\ProjectSettingsCustomizations
-     */
-    public function getCustomizations()
-    {
-        return $this->container['customizations'];
-    }
-
-    /**
-     * Sets customizations
-     *
-     * @param \Passbase\models\ProjectSettingsCustomizations $customizations customizations
-     *
-     * @return $this
-     */
-    public function setCustomizations($customizations)
-    {
-        $this->container['customizations'] = $customizations;
-
-        return $this;
-    }
-
-    /**
-     * Gets verification_steps
-     *
-     * @return \Passbase\models\ProjectSettingsVerificationSteps[]
-     */
-    public function getVerificationSteps()
-    {
-        return $this->container['verification_steps'];
-    }
-
-    /**
-     * Sets verification_steps
-     *
-     * @param \Passbase\models\ProjectSettingsVerificationSteps[] $verification_steps List of the steps through which the user must go through to complete their verification
-     *
-     * @return $this
-     */
-    public function setVerificationSteps($verification_steps)
-    {
-        $this->container['verification_steps'] = $verification_steps;
+        $this->container['last_name'] = $last_name;
 
         return $this;
     }

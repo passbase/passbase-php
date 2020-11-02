@@ -161,6 +161,7 @@ Class | Method | HTTP request | Description
  - [Cursor](docs/Model/Cursor.md)
  - [DataPoints](docs/Model/DataPoints.md)
  - [Identity](docs/Model/Identity.md)
+ - [IdentityOwner](docs/Model/IdentityOwner.md)
  - [IdentityResource](docs/Model/IdentityResource.md)
  - [PaginatedIdentities](docs/Model/PaginatedIdentities.md)
  - [PaginatedResources](docs/Model/PaginatedResources.md)
