@@ -69,14 +69,13 @@ $apiInstance = new Passbase\api\IdentityApi(
     new GuzzleHttp\Client(),
     $config
 );
-$id = "id_example"; // string | Identity id
-$resource_id = "resource_id_example"; // string | Resource id
+$id = "38400000-8cf0-11bd-b23e-10b96e4ef00d"; // string | Unique ID of the identity to return
 
 try {
-    $result = $apiInstance->getIdentityResourceById($id, $resource_id);
+    $result = $apiInstance->getIdentityById($id);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling IdentityApi->getIdentityResourceById: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling IdentityApi->getIdentityById: ', $e->getMessage(), PHP_EOL;
 }
 
 // Configure API key authorization: SecretApiKey
@@ -90,13 +89,14 @@ $apiInstance = new Passbase\api\IdentityApi(
     new GuzzleHttp\Client(),
     $config
 );
-$id = "38400000-8cf0-11bd-b23e-10b96e4ef00d"; // string | Unique ID of the identity to return
+$id = "id_example"; // string | Identity id
+$resource_id = "resource_id_example"; // string | Resource id
 
 try {
-    $result = $apiInstance->getIdentyById($id);
+    $result = $apiInstance->getIdentityResourceById($id, $resource_id);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling IdentityApi->getIdentyById: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling IdentityApi->getIdentityResourceById: ', $e->getMessage(), PHP_EOL;
 }
 
 // Configure API key authorization: SecretApiKey
@@ -150,10 +150,10 @@ All URIs are relative to *https://api.passbase.com/verification/v1*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
-*IdentityApi* | [**getIdentityResourceById**](docs/Api/IdentityApi.md#getidentityresourcebyid) | **GET** /identities/{id}/resource/{resource_id} | Get resource
-*IdentityApi* | [**getIdentyById**](docs/Api/IdentityApi.md#getidentybyid) | **GET** /identities/{id} | Get identity
+*IdentityApi* | [**getIdentityById**](docs/Api/IdentityApi.md#getidentitybyid) | **GET** /identities/{id} | Get identity
+*IdentityApi* | [**getIdentityResourceById**](docs/Api/IdentityApi.md#getidentityresourcebyid) | **GET** /identity/{id}/resources/{resource_id} | Get resource
 *IdentityApi* | [**listIdentities**](docs/Api/IdentityApi.md#listidentities) | **GET** /identities | List identities
-*IdentityApi* | [**listIdentityResources**](docs/Api/IdentityApi.md#listidentityresources) | **GET** /identities/{id}/resources | List resources
+*IdentityApi* | [**listIdentityResources**](docs/Api/IdentityApi.md#listidentityresources) | **GET** /identity/{id}/resources | List resources
 *ProjectApi* | [**getSettings**](docs/Api/ProjectApi.md#getsettings) | **GET** /settings | Get project settings
 
 ## Documentation For Models

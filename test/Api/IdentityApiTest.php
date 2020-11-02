@@ -71,22 +71,22 @@ class IdentityApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test case for getIdentityById
+     *
+     * Get identity.
+     *
+     */
+    public function testGetIdentityById()
+    {
+    }
+
+    /**
      * Test case for getIdentityResourceById
      *
      * Get resource.
      *
      */
     public function testGetIdentityResourceById()
-    {
-    }
-
-    /**
-     * Test case for getIdentyById
-     *
-     * Get identity.
-     *
-     */
-    public function testGetIdentyById()
     {
     }
 
