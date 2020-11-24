@@ -1,6 +1,7 @@
-# ProjectSettingsCustomizations
+# # ProjectSettingsCustomizations
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **button_color** | **string** | \\\&quot;Verify Me\\\&quot; button background color | [optional] 
@@ -8,4 +9,5 @@ Name | Type | Description | Notes
 **font_family** | **string** | Font used in the verification flow | [optional] 
 
 [[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
+
 

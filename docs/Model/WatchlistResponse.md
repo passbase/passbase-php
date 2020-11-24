@@ -1,6 +1,7 @@
-# WatchlistResponse
+# # WatchlistResponse
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **clean** | **bool** | Indicates whether the authentication watchlist check is clean or not | [optional] 
@@ -10,4 +11,5 @@ Name | Type | Description | Notes
 **types** | **string[]** | What kind of alert or warning is associated with the entity (eg. sanction, pep, warning) | [optional] 
 
 [[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
+
 
