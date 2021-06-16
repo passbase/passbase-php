@@ -1,20 +1,21 @@
 # Passbase\IdentityApi
 
-All URIs are relative to *https://api.passbase.com/verification/v1*
+All URIs are relative to https://api.passbase.com/verification/v2.
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**getIdentityById**](IdentityApi.md#getIdentityById) | **GET** /identities/{id} | Get identity
-[**getIdentityResourceById**](IdentityApi.md#getIdentityResourceById) | **GET** /identity/{id}/resources/{resource_id} | Get resource
-[**getIdentityResourceFileById**](IdentityApi.md#getIdentityResourceFileById) | **GET** /identity/{id}/resources/{resource_id}/resource_files/{resource_file_id} | Get resource file
-[**listIdentities**](IdentityApi.md#listIdentities) | **GET** /identities | List identities
-[**listIdentityResources**](IdentityApi.md#listIdentityResources) | **GET** /identity/{id}/resources | List resources
+[**getIdentityById()**](IdentityApi.md#getIdentityById) | **GET** /identities/{id} | Get identity
+[**getIdentityResourceById()**](IdentityApi.md#getIdentityResourceById) | **GET** /identity/{id}/resources/{resource_id} | Get resource
+[**getIdentityResourceFileById()**](IdentityApi.md#getIdentityResourceFileById) | **GET** /identity/{id}/resources/{resource_id}/resource_files/{resource_file_id} | Get resource file
+[**listIdentities()**](IdentityApi.md#listIdentities) | **GET** /identities | List identities
+[**listIdentityResources()**](IdentityApi.md#listIdentityResources) | **GET** /identity/{id}/resources | List resources
 
 
+## `getIdentityById()`
 
-## getIdentityById
-
-> \Passbase\models\Identity getIdentityById($id)
+```php
+getIdentityById($id): \Passbase\models\Identity
+```
 
 Get identity
 
@@ -47,11 +48,9 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling IdentityApi->getIdentityById: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -68,16 +67,17 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
+## `getIdentityResourceById()`
 
-## getIdentityResourceById
-
-> \Passbase\models\Resource getIdentityResourceById($id, $resource_id)
+```php
+getIdentityResourceById($id, $resource_id): \Passbase\models\Resource
+```
 
 Get resource
 
@@ -111,11 +111,9 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling IdentityApi->getIdentityResourceById: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -133,16 +131,17 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
+## `getIdentityResourceFileById()`
 
-## getIdentityResourceFileById
-
-> \Passbase\models\ResourceFile getIdentityResourceFileById($id, $resource_id, $resource_file_id)
+```php
+getIdentityResourceFileById($id, $resource_id, $resource_file_id): \Passbase\models\ResourceFile
+```
 
 Get resource file
 
@@ -177,11 +176,9 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling IdentityApi->getIdentityResourceFileById: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -200,16 +197,17 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
+## `listIdentities()`
 
-## listIdentities
-
-> \Passbase\models\PaginatedIdentities listIdentities($limit, $cursor)
+```php
+listIdentities($limit, $cursor): \Passbase\models\PaginatedIdentities
+```
 
 List identities
 
@@ -234,8 +232,8 @@ $apiInstance = new Passbase\Api\IdentityApi(
     new GuzzleHttp\Client(),
     $config
 );
-$limit = 100; // int | 
-$cursor = aWQ6NDA3MQ%3D%3D; // string | 
+$limit = 100; // int
+$cursor = aWQ6NDA3MQ%3D%3D; // string
 
 try {
     $result = $apiInstance->listIdentities($limit, $cursor);
@@ -243,11 +241,9 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling IdentityApi->listIdentities: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -265,16 +261,17 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
+## `listIdentityResources()`
 
-## listIdentityResources
-
-> \Passbase\models\PaginatedResources listIdentityResources($id, $limit, $cursor)
+```php
+listIdentityResources($id, $limit, $cursor): \Passbase\models\PaginatedResources
+```
 
 List resources
 
@@ -300,8 +297,8 @@ $apiInstance = new Passbase\Api\IdentityApi(
     $config
 );
 $id = 'id_example'; // string | Identity id
-$limit = 100; // int | 
-$cursor = aWQ6NDA3MQ%3D%3D; // string | 
+$limit = 100; // int
+$cursor = aWQ6NDA3MQ%3D%3D; // string
 
 try {
     $result = $apiInstance->listIdentityResources($id, $limit, $cursor);
@@ -309,11 +306,9 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling IdentityApi->listIdentityResources: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -332,9 +327,8 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
-

@@ -34,6 +34,6 @@
         "psr-4": { "Passbase\\" : "lib/" }
     },
     "autoload-dev": {
-        "psr-4": { "Passbase\\" : "test/" }
+        "psr-4": { "Passbase\\Test\\" : "test/" }
     }
 }
