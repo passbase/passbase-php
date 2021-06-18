@@ -13,7 +13,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 // Configure the SDK with your API Secret access key
 $config = Passbase\Configuration::getDefaultConfiguration()->setApiKey('X-API-KEY', '{{YOUR_SECRET_API_KEY}}');
 
-$apiInstance = new Passbase\api\ProjectApi(
+$apiInstance = new Passbase\api\IdentityApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -21,10 +21,10 @@ $apiInstance = new Passbase\api\ProjectApi(
 );
 
 try {
-    $result = $apiInstance->getSettings();
+    $result = $apiInstance->getIdentityById("<uuid>");
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling ProjectApi->getSettings: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling IdentityApi->getIdentityById: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
